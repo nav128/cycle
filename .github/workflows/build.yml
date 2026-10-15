@@ -26,10 +26,10 @@ jobs:
           validate-wrappers: false
 
       - name: Build debug APK
-        working-directory: cycle-tracker
+        working-directory: cycle-tracker/cycle-tracker
         run: gradle assembleDebug --stacktrace
 
       - uses: actions/upload-artifact@v4
         with:
           name: cycle-tracker-debug-apk
-          path: cycle-tracker/app/build/outputs/apk/debug/*.apk
+          path: cycle-tracker/cycle-tracker/app/build/outputs/apk/debug/*.apk
