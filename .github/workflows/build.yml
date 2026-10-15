@@ -33,6 +33,3 @@ jobs:
         with:
           name: cycle-tracker-debug-apk
           path: cycle-tracker/app/build/outputs/apk/debug/*.apk
-        with:
-          name: cycle-tracker-debug-apk
-          path: app/build/outputs/apk/debug/*.apk
