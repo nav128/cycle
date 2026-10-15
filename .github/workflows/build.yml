@@ -32,6 +32,16 @@ jobs:
         working-directory: cycle-tracker/cycle-tracker
         run: gradle assembleDebug --stacktrace
 
+      - name: Install and launch on Android 16 emulator
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 36
+          target: google_apis
+          arch: x86_64
+          script: |
+            adb install -r cycle-tracker/cycle-tracker/app/build/outputs/apk/debug/app-debug.apk
+            adb shell am start -W -n com.cycletracker.app/.MainActivity
+
       - uses: actions/upload-artifact@v4
         with:
           name: cycle-tracker-debug-apk
