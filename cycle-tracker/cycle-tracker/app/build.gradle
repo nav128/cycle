@@ -16,8 +16,20 @@ android {
         versionName "1.0"
     }
 
+    signingConfigs {
+        debug {
+            // Use the default Android debug signing config so GitHub-built APKs can be installed on a device.
+            // This keeps the build installable even when the artifact is not built locally in Android Studio.
+        }
+    }
+
     buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+            debuggable true
+        }
         release {
+            signingConfig signingConfigs.debug
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }

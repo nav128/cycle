@@ -19,15 +19,18 @@ jobs:
         with:
           packages: 'platform-tools'
 
-      # The committed gradle-wrapper.jar is broken, so use a real Gradle install instead of ./gradlew
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.0'
-          validate-wrappers: false
+          validate-wrappers: true
+
+      - name: Make Gradle wrapper executable
+        working-directory: cycle-tracker/cycle-tracker
+        run: chmod +x ./gradlew
 
       - name: Build debug APK
         working-directory: cycle-tracker/cycle-tracker
-        run: gradle assembleDebug --stacktrace
+        run: ./gradlew assembleDebug --stacktrace
 
       - uses: actions/upload-artifact@v4
         with:
