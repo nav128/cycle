@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">מעקב מחזור</string>
+    <string name="add_entry">הוסף רישום</string>
+    <string name="date">תאריך</string>
+    <string name="time">שעה</string>
+    <string name="temperature">טמפרטורה</string>
+    <string name="save">שמור</string>
+    <string name="cancel">בטל</string>
+    <string name="temperature_chart">גרף טמפרטורה</string>
+    <string name="insights">תובנות</string>
+    <string name="celsius">°C</string>
+    <string name="follicular_phase">שלב פוליקולרי</string>
+    <string name="ovulation_detected">זוהתה ביוץ</string>
+    <string name="luteal_phase">שלב לוטאלי</string>
+    <string name="no_data">אין מספיק נתונים</string>
+    <string name="temperature_hint">36.50</string>
+    <string name="entry_saved">הרישום נשמר</string>
+    <string name="invalid_temperature">טמפרטורה לא תקינה</string>
+    <string name="coverline">קו בסיס</string>
+    <string name="waiting_for_data">ממתין לנתונים נוספים</string>
+    <string name="phase_status">מצב מחזור</string>
+</resources>
